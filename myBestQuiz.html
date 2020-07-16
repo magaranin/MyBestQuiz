@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <script src="js/jquery-3.5.1.js"></script>
+        <script src="js/scripts.js"></script>
+        <title>Introduction to computer science</title>
+    </head>
+    <body>
+        <div>
+            <h1>We would try our best to give you a recomendation for a first language to learn as a computer programer.</h1>
+            <p>To be able to help you, we need to know a little about you.</p>
+        </div>
+        <form id="bestRecommendation">
+            <div class="hideShow">
+                <p>1. What is your gender?</p>
+                <div class="options">
+                    <input class="option" type="radio" id="male" name="gender" value="male">Male<br>
+                    <input class="option" type="radio" id="female" name="gender" value="female">Female<br>
+                    <input class="option" type="radio" id="non-binary" name="gender" value="non-binary">Non-binary<br>
+                    <input class="option" type="radio" id="no-answer" name="gender" value="no-answer">I prefer not to answer<br>         
+                </div>
+                <input type="button" value="Next" />
+            </div>
+
+            <div class="hideShow">
+                <p>2. What are your strenghts?</p>
+                <div class="options">
+                    <input class="option" type="radio" id="attention to detail" name="strenghts" value="attention to detail">Attention to detail<br>
+                    <input class="option" type="radio" id="logical thinking" name="strenghts" value="logical thinking">Logical thinking<br>
+                    <input class="option" type="radio" id="problem-solving" name="strenghts" value="problem-solving">Problem-solving<br>
+                    <input class="option" type="radio" id="work well on a team" name="strenghts" value="work well on a team">The ability to work well on a team<br>         
+                </div>
+                <input type="button" value="Next" />
+            </div>
+
+            <div class="hideShow">
+                <p>3. What is your favorite drink?</p>
+                <div class="options">
+                    <input class="option" type="radio" id="coffee" name="drink" value="coffee">Coffee<br>
+                    <input class="option" type="radio" id="tea" name="drink" value="tea">Tea<br>
+                    <input class="option" type="radio" id="water" name="drink" value="water">Water<br>
+                    <input class="option" type="radio" id="alcohol" name="drink" value="alcohol">Alcohol<br>         
+                </div>
+                <input type="button" value="Next" />
+            </div>
+            
+            <div class="hideShow">
+                <p>4. What is your favorite subject?</p>
+                <div class="options">
+                    <input class="option" type="radio" id="history" name="subject" value="history">History<br>
+                    <input class="option" type="radio" id="design" name="subject" value="design">Design<br>
+                    <input class="option" type="radio" id="geometry" name="subject" value="geometry">Geometry<br>
+                    <input class="option" type="radio" id="algebra" name="subject" value="algebra">Algebra<br>         
+                </div>
+                <input type="button" value="Next" />
+            </div>
+
+            <div class="hideShow">
+                <p>5. What is your temperament?</p>
+                <div class="options">
+                    <input class="option" type="radio" id="choleric" name="temperament" value="choleric">Choleric (short-tempered, fast and irritable)<br>
+                    <input class="option" type="radio" id="melancholic" name="temperament" value="melancholic">Melancholic (analytical, wise and quiet)<br>
+                    <input class="option" type="radio" id="phlegmatic" name="temperament" value="phlegmatic">Phlegmatic (relaxed and peaceful)<br>
+                    <input class="option" type="radio" id="sanguine" name="temperament" value="sanguine">Sanguine (enthusiastic, active and social)<br>         
+                </div>
+                <input type="button" value="Next" />
+            </div>           
+
+            <div class="hideShow">
+                <p>6. What type of personality are you?</p>
+                <div class="options">
+                    <input class="option" type="radio" id="director" name="personality" value="director">The director (goal-oriented, risk-taking and good under stress)<br>
+                    <input class="option" type="radio" id="socializer" name="personality" value="socializer">The socializer (relationship-oriented, outgoing, enthusiastic)<br>
+                    <input class="option" type="radio" id="supporter" name="personality" value="supporter">The supporter (task-oriented, stabilizing, cautious)<br>
+                    <input class="option" type="radio" id="thinker" name="personality" value="thinker">The thinker (details-oriented, logical, prepared)<br>         
+                <button type="submit" class="btn">Submit</button>
+                </div>
+            </div>
+        </form>
+
+        <div id="ourRecommendation">
+            <p>Our recommedation is to start your learning journey with language:<span id="program"></span></p>
+        </div>
+    </body>
+
+</html>
