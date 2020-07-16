@@ -1,6 +1,12 @@
 $(document).ready(function () {
     $(".hideShow").first().css("display", "block");
+
+    $(document).on("click", ".next", function() {
+        $(this).closest('.hideShow').hide().next().show();
+    })
+
     $("#bestRecommendation").submit(function (event) {
+        alert();
         const age = parseInt($("#age").val());
         const gender = $("#gender").val();
         const drink = $("#drink").val();
