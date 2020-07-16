@@ -7,11 +7,15 @@ div {
     text-decoration-style: wavy;
 }
 
+.text h3 {
+    color: red;
+    position: relative;
+    font-size: 24px; 
+}
 .text p {
     color: black;
     position: relative;
     font-size: 24px;
-    border: 2px red solid;
 }
 
 #ourRecommendation {
