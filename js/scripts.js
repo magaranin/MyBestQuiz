@@ -4,18 +4,15 @@ $(document).ready(function () {
     $(document).on("click", ".next", function() {
         const age = parseInt($("#age").val());
         if (isNaN(age) || 
-            ($(this).closest('.options').find("input[type=radio]").length > 0 &&
-             $(this).closest('.options').find("input:checked").length === 0) {
+            ($(this).closest('.hideShow').find("input[type=radio]").length > 0 &&
+             $(this).closest('.hideShow').find("input[type=radio]:checked").length === 0)) {
             alert("Please answer the question.");
             return;
         }
         $(this).closest('.hideShow').hide().next().show();
-    })
+    });
 
-    $('input[name=gender]:checked', '#bestRecommendation').val();
-
-    $("#bestRecommendation").submit(function (event) {
-        
+    $("#bestRecommendation").submit(function (event) {        
         const age = parseInt($("#age").val());
         const gender = $('input[name=gender]:checked', '#bestRecommendation').val();
         const drink = $('input[name=drink]:checked', '#bestRecommendation').val();
@@ -23,7 +20,13 @@ $(document).ready(function () {
         const subject = $('input[name=subject]:checked', '#bestRecommendation').val();
         const temperament = $('input[name=temperament]:checked', '#bestRecommendation').val();
         const personality = $('input[name=personality]:checked', '#bestRecommendation').val();
-        alert(gender);
+        
+        if ($(this).find('input[type=button].next:visible').length > 0) {
+            $(this).find('input[type=button].next:visible').click();
+            event.preventDefault();
+            return;
+        }
+        
         let ourRecommendation = "Python";
 
         if (gender === 'male' &&
@@ -66,8 +69,10 @@ $(document).ready(function () {
             personality === 'supporter')) {
                 ourRecommendation ="Ruby";
             }
-            $("#program").text(ourRecommendation);
-            $("#ourRecommendation").show(); 
+
+        $("#program").text(ourRecommendation);
+        $("#ourRecommendation").show();
+        $(this).hide();
 
         event.preventDefault();
     });
