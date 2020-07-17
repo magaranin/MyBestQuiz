@@ -7,11 +7,6 @@ div {
     text-decoration-style: wavy;
 }
 
-.text h3 {
-    color: red;
-    position: relative;
-    font-size: 24px; 
-}
 .text p {
     color: black;
     position: relative;
@@ -20,15 +15,13 @@ div {
 
 #ourRecommendation {
     display: none;
+    color: red;
+    position: relative;
+    font-size: 20px;
 }
+
 
 .hideShow {
     display: none;
-    border:1px    
-}
-
-div.hideShow {
-    margin: 5px;
-    width: 700px;
     background: none;
     }
